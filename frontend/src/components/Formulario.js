@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Axios from 'axios'
+import Swal from 'sweetalert2'
 
 export default function Formulario(){
   
@@ -14,7 +15,12 @@ export default function Formulario(){
     const respuesta=await Axios.post('http://localhost:4000/api',NuevoEmpleado)
     console.log(respuesta)
     const mensaje = respuesta.data.mensaje
-    alert(mensaje)
+    Swal.fire({
+      icon: 'success',
+      title: mensaje,
+      showConfirmButton: false,
+      timer: 1500
+    })
   }
   return (
     <div className="container col-md-3 mt-4">
