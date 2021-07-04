@@ -8,6 +8,7 @@ export default function Formulario(){
   const [salario,setSalario]=useState('');
   
   const registrar=async(e)=>{
+    console.log('entre')
     e.preventDefault()
     const NuevoEmpleado={nombre,apellido,salario}
     const respuesta=await Axios.post('http://localhost:4000/api',NuevoEmpleado)

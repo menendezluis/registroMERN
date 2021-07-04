@@ -1,0 +1,10 @@
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const empleado= new Schema({
+    nombre : { type : String, required : true, max : [127, "Max Length is 127 characters"] },
+    apellido : { type : String, required : true, max : [127, "Max Length is 127 characters"] },
+    salario : Number
+});
+
+module.exports = mongoose.model("Empleado", empleado );

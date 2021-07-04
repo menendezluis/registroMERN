@@ -1,5 +1,5 @@
 const PruebaCtrl={}
-
+const Empleado=require('../models/prueba.models')
 //consulta
 PruebaCtrl.obtener=(req,res)=> {
   
