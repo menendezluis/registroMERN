@@ -1,9 +1,15 @@
 const PruebaCtrl={}
 const Alumno=require('../models/prueba.models')
 //consulta
-PruebaCtrl.obtener=(req,res)=> {
-  
-  res.send('Consulta no valida')
+PruebaCtrl.obtener= async (req,res)=> {
+    const alumnos = await Alumno.find()
+	res.send(alumnos)
+
+    
+    //res.json({
+        //status: 'API Its Working',
+    //    message: 'Welcome to RESTHub crafted with love!'
+  //  });
   
 }
 

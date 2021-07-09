@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Axios from 'axios'
 import Swal from 'sweetalert2'
+//import Registros from './Registros'
 
 //Calculamos la edad
 
@@ -125,6 +126,7 @@ else{
 }
   }
   return (
+        <div className="container">
     <div className="container col-md-3 mt-4">
      <div className="form-group">
         <input type="texto" className="form-control mt-2"  require placeholder="Carnet"
@@ -177,6 +179,8 @@ else{
       <button type="submit" className="btn btn-primary mt-2">Guardar
       </button>
     </form>
+</div>
+   
     </div>
   )
 }
