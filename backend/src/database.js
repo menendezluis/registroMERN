@@ -1,6 +1,6 @@
 const mongoose=require('mongoose')
 
-URI=('mongodb://localhost/practica')
+URI=('mongodb://localhost/poesia')
 
 mongoose.connect(URI,{
   useNewUrlParser:true,

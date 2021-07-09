@@ -1,10 +1,19 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const empleado= new Schema({
+const alumno= new Schema({
     nombre : { type : String, required : true, max : [127, "Max Length is 127 characters"] },
-    apellido : { type : String, required : true, max : [127, "Max Length is 127 characters"] },
-    salario : Number
+    direccion : { type : String, required : true, max : [500, "Max Length is 500 characters"] },
+    genero: { type : String, required : true, max : [15, "Max Length is 15 characters"] },
+    telefono : Number,
+    nacimiento: {
+        type: Date
+    },
+    carrera : { type : String, required : true, max : [500, "Max Length is 500 characters"] },
+    poesia : { type : String, required : true, max : [15, "Max Length is 15 characters"] },
+    fecha: {
+        type: Date
+    }
 });
 
-module.exports = mongoose.model("Empleado", empleado );
+module.exports = mongoose.model("Alumno", alumno );

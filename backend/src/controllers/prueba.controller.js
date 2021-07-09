@@ -1,24 +1,37 @@
 const PruebaCtrl={}
-const Empleado=require('../models/prueba.models')
+const Alumno=require('../models/prueba.models')
 //consulta
 PruebaCtrl.obtener=(req,res)=> {
   
-  res.send('funcionando desde get')
+  res.send('Consulta no valida')
   
 }
 
 //put
 PruebaCtrl.crear=async(req,res)=>{
   console.log(req);
-  const {nombre,apellido,salario}=req.body
-  const NuevoRegistro=new Empleado({
+  const {nombre,
+  direccion,
+  genero,
+  telefono,
+  nacimiento,
+  carrera,
+  poesia,
+  fecha
+  }=req.body
+  const NuevoRegistro=new Alumno({
     nombre,
-    apellido,
-    salario
+    direccion,
+    genero,
+    telefono,
+    nacimiento,
+    carrera,
+    poesia,
+    fecha
   })
   await NuevoRegistro.save()
   res.json({
-    mensaje:'Empleado guardado'
+    mensaje:'Espacio reservado para: '
   })
 }
 //PruebaCtrl.crear=(req,res)=>{
