@@ -16,9 +16,10 @@ Este repositorio se compone de 2 partes:
 	BackEnd
 
 Luego de descargar el repositorio debes ingresar a cada carpeta respectivamente e instalar los componentes
+
 	backend/
 	npm install
-
+	
 	frontend/
 	npm install
 
@@ -32,10 +33,8 @@ Con esto listo, puedes proceder a levantar los dos servidores
 	//Esta acción levantara el api en 
 	http://localhost:4000/api	
 	Del CRUD solo utilizaremos dos métodos
-	Create 
-/post
-Read 
-/get
+	Create /post
+	Read /get
 
 
 	cd frontend/
